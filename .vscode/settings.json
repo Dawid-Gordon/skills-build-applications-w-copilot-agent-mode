@@ -6,6 +6,7 @@
         "true": true,
         "git push": true,
         "npm --prefix /workspaces/skills-build-applications-w-copilot-agent-mode/octofit-tracker/backend": true,
-        "git checkout": true
+        "git checkout": true,
+        "git rev-parse": true
     }
 }

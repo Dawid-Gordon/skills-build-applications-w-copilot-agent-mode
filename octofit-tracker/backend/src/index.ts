@@ -21,7 +21,9 @@ const port = Number(process.env.PORT || 8000);
 
 // Codespaces-aware API URL support
 const codespaceName = process.env.CODESPACE_NAME;
-const codespaceApiUrl = codespaceName ? `https://${codespaceName}-8000.githubpreview.dev` : undefined;
+// Use the Codespaces preview domain when available; fallback to localhost when not.
+// The app.github.dev pattern exposes the forwarded port (8000) as <CODESPACE_NAME>-8000.app.github.dev
+const codespaceApiUrl = codespaceName ? `https://${codespaceName}-8000.app.github.dev` : undefined;
 
 const allowedOrigins = [
   'http://localhost:5173',
